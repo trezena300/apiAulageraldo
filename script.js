@@ -1,21 +1,27 @@
-async function  getReceita(){
-    let response = await fetch ("https://www.themealdb.com/api/json/v1/1/random.php");
+async function  onepiecefruits(){
+    let response = await fetch ("https://api.api-onepiece.com/v2/fruits/en");
     let data = await response.json ();
     console.log("dados brutos:")
     console.log(data)
-    
-    let receita = data.meals[0];
-    console.log("dados receita:")
+    //sorteia uma fruta
+
+
+let numeroAleatorio = Math.floor(Math.random() * data.length);
+let fruta = data[numeroAleatorio];
+
+
+    console.log("fruits:")
     console.log(data)
+    console.log(data[0])
+    console.log(fruta)
+    document.getElementById("fruits").innerHTML = `
+
+
+    <h2>${fruta.name} </2h>
     
-    document.getElementById("receita").innerHTML = `
-   
-
-    <h2>${receita.strMeal} </2h>
-    <img src ="${receita.strMealThumb}"  />
-
-    <p> categoria: ${receita.strCategory} </p>
-    <p> ingredientes:${receita.strInstructions} </p>
+    <p> nomeJapones: ${fruta.roman_name} </p>
+    <p> categoria: ${fruta.type} </p>
+    <p> descricao: ${fruta.description}</p>
 
     `
     ;
