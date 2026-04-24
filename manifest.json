@@ -7,9 +7,14 @@
   "theme_color": "#ff4500",
   "icons": [
     {
-      "src": "onepiece.png",
+      "src": "img/onepiece.png",
       "sizes": "192x192",
-      "type": "img/png"
+      "type": "image/png"
+    },
+    {
+      "src": "img/onepiece.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
