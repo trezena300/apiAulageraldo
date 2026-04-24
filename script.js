@@ -1,3 +1,4 @@
+
 async function  onepiecefruits(){
     let response = await fetch ("https://api.api-onepiece.com/v2/fruits/en");
     let data = await response.json ();
